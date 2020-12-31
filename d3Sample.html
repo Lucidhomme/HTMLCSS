@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src='https://d3js.org/d3.v4.min.js'></script>
+
+ 
+ </head>
+ <body>
+    <p id='p01'> First Paragraph</p>
+    <p id='p02'> Second Paragraph</p>
+    <p class='p03'> Third Paragraph</p>
+	<p class='p03'> Third Paragraph</p>
+    
+	<table border='1'>
+	    <tr><td>one</td><td>two</td></tr>
+        <tr><td>three</td><td>four</td></tr>   
+	</table>
+	
+	<script>  // 바디가 열리기전에 헤드에 스크립트를 호출하면 에러남 하여 헤드에는 주소만 쳐놓고 내용은 바디에..
+      // write your script code here...   
+	  // select(tag) 도큐먼트에 처음만나는 것을 찾음 , select(#id), selectAll(selector) 모든 도큐먼트를 찾는것
+	  //d3.select('p').style('color','blue')
+      //d3.select('#p02').style('color', 'green')
+	  //d3.select('.p03').style('color', 'red')
+	  //d3.selectAll('.p03').style('color','blue')
+      d3.select('table').selectAll('tr').selectAll('td').style('background-color','blue')
+	</script>  
+
+
+ </body>
+</html>

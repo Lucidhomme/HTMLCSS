@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <script src='https://d3js.org/d3.v4.min.js'></script>
+
+ </head>
+ <body>
+    <p></p>
+	<p></p>
+	<p></p>
+
+    <div>
+        <p>Error  : This is Error</p>
+		<p>Warning : This is Warning</p>
+	</div>
+
+
+    <script>
+    data = [100, 200, 300]
+    
+	d3
+	.select('body')
+	.selectAll('p')
+    .data(data)   // data를 바인딩하는 함수 data의 길이만큼 데이터를 주고있다
+    .text(function(d,idx) {
+		console.log('index : ' +idx)
+		console.log('data : ' +d)
+		console.log('this : ' + this)  //안넣어도 되지만 콘솔에 디버그를 확인하기 위해서 , 앞에들어오는게 데이터고 뒤에 들어오는게 인덱스라 d,idx로 표현
+
+		return d ;
+		})
+
+		d3.selectAll('div > p').style('color', function(d,idx) {
+		    txt = this.innerText ;
+			//window.alert(txt)
+			if(txt.indexOf('Error') >= 0) {
+				return 'red' ;
+				}
+
+            if(txt.indexOf('Warning') >= 0) {
+				return 'blue' ;
+				}
+		})
+
+	</script>
+
+ </body>
+</html>

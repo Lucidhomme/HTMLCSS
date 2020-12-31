@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  
+  <link href="./css/test.css" rel="stylesheet">
+
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script></script>
+
+
+ </head>
+ <body>
+    
+	<p>해당 태그는 문단을 나타내는 태그입니다</P>
+	
+	<h1 class="hi_css">CSS TEST</h1>
+	
+    <center id='result'>해당 태그는 센터에 출력 됩니다~~~</center>
+    <center>해당 태그는 센터에 출력 됩니다~~~</center>
+    <form action ="destination.html" method="post">
+        ID : <input type="text" name="id" id="id" /><br/>
+		PWD : <input type="password" name="pwd" id="pwd" /><br/>
+		<input type="submit" value="SEND">
+	</form>
+
+    <div class='msg'></div>
+	<input type='button' value='BTN' id='scriptBtn' />
+    <p   id='msgLayer'>
+
+<script>
+        $(document).ready(function() {
+             $("#scriptBtn").click(function() {
+				// window.alert('버튼을 클릭하셨습니다');
+                // document text 추가하는 방법은 : append() , html() , text()
+				$('.msg').append('텍스트를 추가할 때 사용하는 함수입니다~') ;
+			 })
+		})
+		
+        document.getElementByid('msgLayer').innerHTML = 'append msg' ;
+
+  </script>
+
+
+
+ </body>
+</html>

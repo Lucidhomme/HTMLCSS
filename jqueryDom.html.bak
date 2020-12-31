@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+ <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+ </head>
+ <body>
+    <ul id='list'></ul>
+
+	<script>
+	    jsonObj = {url : 'www.naver.com' , txt : '네이버'}
+        jsonAry = [{ url : 'www.naver.com', txt : '네이버'},
+		          { url : 'www.naver.com', txt : '네이버'},
+				  { url : 'www.naver.com', txt : '네이버'},
+	              { url : 'www.naver.com', txt : '네이버'},
+                  { url : 'www.naver.com', txt : '네이버'}]
+        $(document).ready(function() {
+			 $.each(jsonAry, function(idx,obj) {
+	         $('#list').append("<li><a href='"+Obj.url+"'>"+Obj.txt+"</a></li>")		 
+			 });
+             $('li:even').css('background','lightgray').css('font-weight','bold')
+             $('li:odd').css('background','lightblue')
+			})
+	</script>
+ </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <script src='https://d3js.org/d3.v4.min.js'></script>
+
+ </head>
+ <body>
+  
+  <p></p>
+  <p></p>
+  <p></p>
+  
+  <script>
+  //data() 데이터길이만큼 바인딩, enter() 자리표시할떄, exit() 로드제거할때, datum() 조인하지않고 선택한 데이터 삽입
+  
+  myData = [100, 200, 300] //상수는 안나옴 
+  d3.selectAll('p')
+    .data(myData)
+    .text(function(d, idx) {
+	    return d ;
+	})
+
+    data = [1,2,3,4,5]
+	d3.select('body')
+      .selectAll('span')
+	  .data(data)
+	  .enter()
+	  .append('span')
+	  .text(function(d, idx) {
+		  console.log(idx)
+	      return d ;
+
+	  })
+  </script>
+
+ </body>
+</html>

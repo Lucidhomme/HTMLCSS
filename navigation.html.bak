@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ 
+  <link href="./css/navigation.css" rel="stylesheet">
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+ </head>
+ <body>
+     <ul>
+          <li><a id="python">Python</a></li>
+		  <li><a href="#" id="r">RStudio</a></li>
+		  <li><a href="#" id="django">Django</a></li>
+		  <li><a href="#" id="jquery">jQuery</a></li>
+	 </ul>
+
+     <hr/>
+     <label>제조사</label>
+     <select id='maker'>
+         <option>[선택하세요]</option>
+         <option>[BMW]</option>
+		 <option>[AUDI]</option>
+		 <option>[BENS]</option>
+	 </select>
+	 <label>차종</label>
+	 <select id='model'>
+	     <option>[선택하세요]</option>
+     </select>
+	 <button id='searchBtn'>SEARCH</button>
+
+
+<script>
+		bmwAry  = ['320d','520d','740d','미니'] ;
+		audiAry = ['R8', 'A3','A4','A5','A6','Q5'] ;
+		bensAry = ['e450', 's600', 'amg gt', 'B200'] ;
+		
+		function displayModel(ary) {
+			$('#model').empty() ;
+			$.each(ary , function(idx, obj){
+				$('#model').append("<option>"+obj+"</option>")
+			})
+		}
+
+		$(document).ready(function() {
+			$('#python').click(function() {
+				location.href='www.naver.com' ; 			
+			})
+
+			$('#maker').change(function() {
+				// val() , text()
+				//window.alert( $('#maker').val() );
+				if($('#maker').val() = 'BMW') {
+					displayModel(bmwAry)
+				}
+				if($('#maker').val() = 'AUDI') {
+					displayModel(audiAry)
+				}
+				if($('#maker').val() = 'BENS') {
+					displayModel(bensAry)
+				}
+			})
+
+		}) ;
+	</script>
+
+
+ </body>
+</html>

@@ -1,0 +1,22 @@
+    p {
+	     color : blue ;
+		 text-align : right ;
+	  }
+	  .h1_css {
+	     color : red ;
+		 text-align : center ;
+	  }
+
+      #result {
+	      color : green ; 
+	  }
+
+	  
+	  input[type=text] {
+	      color : red ;
+	  
+	      }
+
+	  input[type=password] {
+	      color : blue ;
+		  }

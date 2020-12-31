@@ -1,0 +1,18 @@
+    p {
+	     color : blue ;
+		 text-align : right ;
+	  }
+
+      #result {
+	      color : green ; 
+	  }
+
+	  
+	  input[type=text] {
+	      color : red ;
+	  
+	      }
+
+	  input[type=password] {
+	      color : blue ;
+		  }

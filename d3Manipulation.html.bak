@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+     .error {
+	 color : red ;
+	 }
+
+  </style>
+
+  <script src='https://d3js.org/d3.v4.min.js'></script>
+
+ </head>
+ <body>
+    <div>
+	     <p></p>
+	</div>
+
+    <p><label>D3</label> <input type='checkbox' checked=true /> </p>
+	<p><label>JQuery</label> <input type='checkbox' /> </p>
+
+
+    <script>
+	     // D3 manipulation function text(), append(), insert(), remove(), html(), attr(), property(), style(), classed()
+         d3.select('div > p').text('this is sample text')
+
+		 d3.select('div').append('p').text('dynamic text append')
+
+		 d3.select('div').insert('p')
+
+		 d3.select('div').remove()
+
+		 d3.select('body')
+		 .append('div')
+		 .append('p')
+		 .html('<span>This is new inner html</span>') //동적으로 제어
+
+		 d3.select('div > p > span').attr('class', 'error')
+
+		 d3.select('input').property('checked', true)  //attr로 제어안될떄 property로 제어
+    </script>
+ </body>
+</html>
